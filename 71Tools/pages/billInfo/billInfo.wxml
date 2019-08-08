@@ -1,0 +1,4 @@
+<view class="billInfo">
+待定,单条账单流水信息编辑
+    {{userInfo.nickName}}
+</view>

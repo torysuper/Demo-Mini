@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="index">
+  
+  <view class="top">
+    <view class="time">
+      <picker class="weui-btn1" mode="date" value="{{date1}}" end="{{date1}}" bindchange="bindDateChange1">
+      <view class="picker">{{date1}}</view>
+      </picker>
+      <view class="picker">-</view>
+      <picker class="weui-btn2" mode="date" value="{{date2}}" start="{{date1}}" end="2025-09-01" bindchange="bindDateChange2">
+      <view class="picker">{{date2}}</view>
+      </picker>
+    </view>
+    
+    <view class="table-hd">
+          <view class="th th1">内容</view>
+          <view class="th th2">金额</view>
+          <view class="th th3">类别</view>
+          <view class="th th4">操作</view>
+    </view>
+  </view>
+  <scroll-view class="bd" scroll-y style="height: 200px;">
+    <view class="table">
+      <view class="tr" wx:for="{{billList}}" wx:key="id" data-index="{{index}}" catchtap="changeBill" id="{{item.id}}">
+          <view class="td td1">{{item.labelCn}}</view>
+          <view class="td td2">{{item.price}}</view>
+          <view class="td td3">{{item.category}}</view>
+          <view class="td td4"  catchtap="delBill" id="{{item.id}}"  data-index="{{index}}">
+            <view class="weui-progress__opr">
+              <icon type="cancel" size="20"></icon>
+            </view>
+          </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="btm">
+    <!-- <input class="text2"></input> -->
+    <textarea class="text2" show-confirm-bar=''></textarea>
+    <button class="mini-btn" type="primary" size="mini">
+      <text class="text3">发射</text>
+    </button>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/statement/statement",
+    "pages/billInfo/billInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "柒壹的工具箱",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/icon_nav_widget.png",
+      "selectedIconPath": "images/icon_nav_widget.png",
+      "text":"a"
+    },{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/icon_nav_special.png",
+      "selectedIconPath": "images/icon_nav_special.png",
+      "text": "b"
+    },{
+      "pagePath": "pages/statement/statement",
+      "iconPath": "images/icon_nav_form.png",
+      "selectedIconPath": "images/icon_nav_form.png",
+      "text": "c"
+    }]
+  }
+}
